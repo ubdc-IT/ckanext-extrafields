@@ -1,0 +1,6 @@
+
+        [ckan.plugins]
+        # Add plugins here, e.g.
+        # myplugin=ckanext.extrafields.plugin:PluginClass
+	example_customtext=ckanext.extrafields.plugin:ExampleIDatasetFormPlugin
+    
