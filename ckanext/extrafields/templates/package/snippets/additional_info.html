@@ -7,5 +7,77 @@
 			<td class="dataset-details">{{ pkg_dict.custom_text }}</td>
 		</tr>
 	{% endif %}
+	{% if pkg_dict.identifier %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("Identifier") }}</th>
+			<td class="dataset-details">{{ pkg_dict.identifier }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.contactPoint %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("Contact Point") }}</th>
+			<td class="dataset-details">{{ pkg_dict.contactPoint }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.description %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("Description") }}</th>
+			<td class="dataset-details">{{ pkg_dict.description }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.landingPage %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("Landing Page") }}</th>
+			<td class="dataset-details">{{ pkg_dict.landingPage }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.issued %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("Issued") }}</th>
+			<td class="dataset-details">{{ pkg_dict.issued }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.modified %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("Modified") }}</th>
+			<td class="dataset-details">{{ pkg_dict.modified }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.language %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("language") }}</th>
+			<td class="dataset-details">{{ pkg_dict.language }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.spatial %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("Spatial") }}</th>
+			<td class="dataset-details">{{ pkg_dict.spatial }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.temporal %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("Temporal") }}</th>
+			<td class="dataset-details">{{ pkg_dict.temporal }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.accrualPeriodicity %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("Accrual Periodicity") }}</th>
+			<td class="dataset-details">{{ pkg_dict.accrualPeriodicity }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.keyword %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("Keyword") }}</th>
+			<td class="dataset-details">{{ pkg_dict.keyword }}</td>
+		</tr>
+	{% endif %}
+	{% if pkg_dict.theme %}
+		<tr>
+			<th scope="row" class="dataset-label">{{_("theme") }}</th>
+			<td class="dataset-details">{{ pkg_dict.theme }}</td>
+		</tr>
+	{% endif %}
 {% endblock %}
 

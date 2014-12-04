@@ -3,4 +3,15 @@
 {% block package_basic_fields_custom %}
 	{{ form.input('custom_text', label=_('Custom Text'), id='field-custom_text', placeholder=_('custom text'), value=data.custom_text, error=errors.custom_text, classes=['control-medium']) }}
 	{{ form.input('identifier', label=_('Identifier'), id='field-identifier', placeholder=_('identifier'), value=data.identifier, error=errors.identifier, classes=['control-medium']) }}
+	{{ form.input('contactPoint', label=_('Contact Point'), id='field-contactPoint', placeholder=_('contact'), value=data.contactPoint, error=errors.contactPoint, classes=['control-medium']) }}
+	{{ form.input('description', label=_('Description'), id='field-description', placeholder=_('description'), value=data.description, error=errors.description, classes=['control-medium']) }}
+	{{ form.input('landingPage', label=_('Landing Page'), id='field-landingPage', placeholder=_('landing page'), value=data.landingPage, error=errors.landingPage, classes=['control-medium']) }}
+	{{ form.input('issued', label=_('Issued'), id='field-issued', placeholder=_('issued'), value=data.issued, error=errors.issued, classes=['control-medium']) }}
+	{{ form.input('modified', label=_('Modified'), id='field-modified', placeholder=_('modified'), value=data.modified, error=errors.modified, classes=['control-medium']) }}
+	{{ form.input('language', label=_('language'), id='field-language', placeholder=_('language'), value=data.language, error=errors.language, classes=['control-medium']) }}
+	{{ form.input('spatial', label=_('Spatial'), id='field-spatial', placeholder=_('spatial'), value=data.spatial, error=errors.spatial, classes=['control-medium']) }}
+	{{ form.input('temporal', label=_('Temporal'), id='field-temporal', placeholder=_('temporal'), value=data.temporal, error=errors.temporal, classes=['control-medium']) }}
+	{{ form.input('accrualPeriodicity', label=_('Accrual Periodicity'), id='field-accrualPeriodicity', placeholder=_('accrual periodicity'), value=data.accrualPeriodicity, error=errors.accrualPeriodicity, classes=['control-medium']) }}
+	{{ form.input('keyword', label=_('Keyword'), id='field-keyword', placeholder=_('keyword'), value=data.keyword, error=errors.keyword, classes=['control-medium']) }}
+	{{ form.input('theme', label=_('Theme'), id='field-theme', placeholder=_('theme'), value=data.theme, error=errors.theme, classes=['control-medium']) }}
 {% endblock %}
