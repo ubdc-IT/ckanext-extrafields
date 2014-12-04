@@ -57,9 +57,6 @@ class ExampleIDatasetFormPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
 			'title': [tk.get_validator('ignore_missing')]
 		})
 		schema['resources'].update({
-			'description': [tk.get_validator('ignore_missing')]
-		})
-		schema['resources'].update({
 			'issued': [tk.get_validator('ignore_missing')]
 		})
 		schema['resources'].update({
