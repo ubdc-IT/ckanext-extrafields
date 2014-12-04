@@ -13,12 +13,6 @@
 			<td class="dataset-details">{{ pkg_dict.contactPoint }}</td>
 		</tr>
 	{% endif %}
-	{% if pkg_dict.description %}
-		<tr>
-			<th scope="row" class="dataset-label">{{_("Description") }}</th>
-			<td class="dataset-details">{{ pkg_dict.description }}</td>
-		</tr>
-	{% endif %}
 	{% if pkg_dict.landingPage %}
 		<tr>
 			<th scope="row" class="dataset-label">{{_("Landing Page") }}</th>

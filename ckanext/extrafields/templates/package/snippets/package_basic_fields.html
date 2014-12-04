@@ -3,7 +3,6 @@
 {% block package_basic_fields_custom %}
 	{{ form.input('identifier', label=_('Identifier'), id='field-identifier', placeholder=_('identifier'), value=data.identifier, error=errors.identifier, classes=['control-medium']) }}
 	{{ form.input('contactPoint', label=_('Contact Point'), id='field-contactPoint', placeholder=_('contact'), value=data.contactPoint, error=errors.contactPoint, classes=['control-medium']) }}
-	{{ form.input('description', label=_('Description'), id='field-description', placeholder=_('description'), value=data.description, error=errors.description, classes=['control-medium']) }}
 	{{ form.input('landingPage', label=_('Landing Page'), id='field-landingPage', placeholder=_('landing page'), value=data.landingPage, error=errors.landingPage, classes=['control-medium']) }}
 	{{ form.input('issued', label=_('Issued'), id='field-issued', placeholder=_('issued'), value=data.issued, error=errors.issued, classes=['control-medium']) }}
 	{{ form.input('modified', label=_('Modified'), id='field-modified', placeholder=_('modified'), value=data.modified, error=errors.modified, classes=['control-medium']) }}

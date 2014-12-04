@@ -12,13 +12,7 @@ class ExampleIDatasetFormPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
 			'identifier': [tk.get_validator('ignore_missing'), tk.get_converter('convert_to_extras')]
 		})
 		schema.update({
-			'title': [tk.get_validator('ignore_missing')]
-		})
-		schema.update({
 			'contactPoint': [tk.get_validator('ignore_missing'), tk.get_converter('convert_to_extras')]
-		})
-		schema.update({
-			'description': [tk.get_validator('ignore_missing'), tk.get_converter('convert_to_extras')]
 		})
 		schema.update({
 			'landingPage': [tk.get_validator('ignore_missing'), tk.get_converter('convert_to_extras')]
