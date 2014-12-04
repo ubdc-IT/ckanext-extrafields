@@ -1,7 +1,6 @@
 {% ckan_extends %}
 
 {% block package_basic_fields_custom %}
-	{{ form.input('custom_text', label=_('Custom Text'), id='field-custom_text', placeholder=_('custom text'), value=data.custom_text, error=errors.custom_text, classes=['control-medium']) }}
 	{{ form.input('identifier', label=_('Identifier'), id='field-identifier', placeholder=_('identifier'), value=data.identifier, error=errors.identifier, classes=['control-medium']) }}
 	{{ form.input('contactPoint', label=_('Contact Point'), id='field-contactPoint', placeholder=_('contact'), value=data.contactPoint, error=errors.contactPoint, classes=['control-medium']) }}
 	{{ form.input('description', label=_('Description'), id='field-description', placeholder=_('description'), value=data.description, error=errors.description, classes=['control-medium']) }}
