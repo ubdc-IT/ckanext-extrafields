@@ -1,6 +1,7 @@
 import ckan.plugins as p
 import ckan.plugins.toolkit as tk
 
+
 def create_gcc_vocab():
     user = tk.get_action('get_site_user')({'ignore_auth': True}, {})
     context = {'user': user['name']}
@@ -18,6 +19,7 @@ def create_gcc_vocab():
             data = {'name': tag, 'vocabulary_id': vocab['id']}
             tk.get_action('tag_create')(context, data)
 
+
 def gcc_vocab():
     create_gcc_vocab()
     try:
@@ -27,10 +29,14 @@ def gcc_vocab():
     except tk.ObjectNotFound:
         return None
 
+
 class ExampleIDatasetFormPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
     p.implements(p.IDatasetForm)
     p.implements(p.IConfigurer)
     p.implements(p.ITemplateHelpers)
+
+    def get_helpers(self):
+        return {'gcc_vocab': gcc_vocab}
 
     def _modify_package_schema(self, schema):
         schema.update({
@@ -240,6 +246,3 @@ class ExampleIDatasetFormPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
         # Add this plugin's templates dir to CKAN's extra_template_paths, so
         # that CKAN will use this plugin's custom templates.
         tk.add_template_directory(config, 'templates')
-
-    def get_helpers(self):
-        return {'gcc_codes': gcc_codes}
