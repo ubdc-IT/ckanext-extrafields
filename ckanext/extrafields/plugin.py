@@ -190,7 +190,7 @@ class ExampleIDatasetFormPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
         schema.update({
             'name': [tk.get_validator('ignore_missing')]
         })
-        #schema['tags']['__extras'].append(tk.get_converter('free_tags_only'))
+        schema['tags']['__extras'].append(tk.get_converter('free_tags_only'))
         schema.update({
             'theme': [
                 tk.get_converter('convert_from_tags')('keywords'),
