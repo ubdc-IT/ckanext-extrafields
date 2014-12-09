@@ -4,3 +4,20 @@
 	them on our example. #}
 {% block custom_fields %}
 {% endblock %}
+
+{% block package_metadata_fields %}
+
+  <div class="control-group">
+    <label class="control-label" for="field-theme">{{ _("Theme") }}</label>
+    <div class="controls">
+      <select id="field-theme" name="theme" data-module="autocomplete">
+        {% for theme in h.gcc_codes()  %}
+          <option value="{{ theme }}" {% if country_code in data.get('theme', []) %}selected="selected"{% endif %}>{{ theme }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+
+  {{ super() }}
+
+{% endblock %}
