@@ -88,7 +88,7 @@ class ExampleIDatasetFormPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
         schema.update({
             'theme': [
                 tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_to_tags')('gcc_codes')
+                tk.get_converter('convert_to_tags')('keywords')
             ]
         })
         #set custom resource schema
@@ -193,7 +193,7 @@ class ExampleIDatasetFormPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
         schema['tags']['__extras'].append(tk.get_converter('free_tags_only'))
         schema.update({
             'theme': [
-                tk.get_converter('convert_from_tags')('gcc_codes'),
+                tk.get_converter('convert_from_tags')('keywords'),
                 tk.get_validator('ignore_missing')]
         })
         #set custom resource schema
